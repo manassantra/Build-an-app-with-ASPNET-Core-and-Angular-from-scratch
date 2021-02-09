@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   title = 'Home';
-  constructor() { }
+  users: any;
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.getUsers() ;
+  }
+
+  // tslint:disable-next-line:typedef
+  getUsers() {
+    this.http.get('https://localhost:5001/WeatherForecast').subscribe( response => {
+        this.users = response;
+      }, error => {
+        console.log(error);
+      }
+      );
   }
 
 }
+
