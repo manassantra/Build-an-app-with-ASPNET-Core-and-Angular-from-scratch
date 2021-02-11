@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Data",
+    "\\Entities"
   ],
-  "SelectedNode": "\\API.sln",
+  "SelectedNode": "\\obj",
   "PreviewInSolutionExplorer": false
 }

@@ -1,14 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "E9Xi/HIQaC1IJWPj5tooaes7K5Y/0zlEn6jjzOWu2mo/PXvXhKtsyCNEqEWkC13LX3IVMzDJng4U5DLyPX+kIg==",
+  "dgSpecHash": "rnlg1OKxcw46rgNZTeu10YRGUb28KUsmAzUE8fI8enIKhmaZBSi0COFf3/lgEAxT3UOozJRu5fqc4P25OJxlJQ==",
   "success": true,
   "projectFilePath": "D:\\Personal Workspace\\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\manas\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\manas\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\manas\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.3\\microsoft.data.sqlite.core.5.0.3.nupkg.sha512",
     "C:\\Users\\manas\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.6\\microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\manas\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.3\\microsoft.entityframeworkcore.5.0.3.nupkg.sha512",
     "C:\\Users\\manas\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.3\\microsoft.entityframeworkcore.abstractions.5.0.3.nupkg.sha512",
     "C:\\Users\\manas\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.3\\microsoft.entityframeworkcore.analyzers.5.0.3.nupkg.sha512",
+    "C:\\Users\\manas\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.3\\microsoft.entityframeworkcore.design.5.0.3.nupkg.sha512",
     "C:\\Users\\manas\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.3\\microsoft.entityframeworkcore.relational.5.0.3.nupkg.sha512",
     "C:\\Users\\manas\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\5.0.3\\microsoft.entityframeworkcore.sqlite.5.0.3.nupkg.sha512",
     "C:\\Users\\manas\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\5.0.3\\microsoft.entityframeworkcore.sqlite.core.5.0.3.nupkg.sha512",
@@ -37,5 +40,12 @@
     "C:\\Users\\manas\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
     "C:\\Users\\manas\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Personal Workspace\\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\\API\\obj\\project.nuget.cache : Found invalid data while decoding."
+    }
+  ]
 }

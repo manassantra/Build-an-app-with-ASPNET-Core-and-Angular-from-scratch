@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   getUsers() {
-    this.http.get('https://localhost:5001/WeatherForecast').subscribe( response => {
+    this.http.get('https://localhost:5001/api/Users').subscribe( response => {
         this.users = response;
       }, error => {
         console.log(error);

@@ -1,34 +1,20 @@
 <div class="container">
     <div class="justify-content-center mt-2">
 
-        <div class="card bg-white" *ngFor="let user of users">
-            <span class="card-header"><em>{{user.summary}}</em></span>
-            <div class="card-body" style="background: rgba(230, 176, 126, 0.685);">
-              <span class="info-box-text">{{user.date | date:'dd/MM/yyyy'}} | {{user.date | date:'hh:mm:ss z'}}</span>
-              &nbsp; | &nbsp;
-              <span class="info-box-number">{{user.temperatureC}}C</span>
-              <!-- The progress section is optional -->
-              <div class="row">
-                  <div class="col-sm-1">
-                    <div class="spinner-grow text-primary bg-warning pull-right" role="status">
-                        <span class="visually-hidden">
-                           {{user.summary}}
-                        </span>
-                    </div>
-                    <div class="spinner-grow text-primary bg-success pull-right" role="status">
-                      <span class="visually-hidden">
-                         {{user.summary}}
-                      </span>
-                    </div>
-                  </div>
-                  <div class="col-sm-11 mr-5 mt-2">
-                    <div class="progress pull-left" style="width: 20%;">
-                        <div class="progress-bar  progress-bar-striped">{{user.temperatureF}} F</div>
-                      </div>
-                  </div>
-              </div>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
+        <div class="table table-responsive-lg table-hover">
+          <thead>
+            <tr>
+              <td>Id</td>
+              <td>Name</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let u of users">
+              <td>{{u.id}}</td>
+              <td>{{u.userName}}</td>
+            </tr>
+          </tbody>
+        </div>
+
     </div>
 </div>
