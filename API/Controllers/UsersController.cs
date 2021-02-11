@@ -8,9 +8,7 @@ using API.Entities;
 namespace API.Controllers
 {
 
-    [ApiController]
-    [Route("api/[controller]")]
-    public class UsersController : ControllerBase
+    public class UsersController : BaseApiController
     {
         private readonly DataContext _context;
         public UsersController(DataContext context)
@@ -18,7 +16,6 @@ namespace API.Controllers
             _context = context;
         }
 
-        //api/[Controller]
         [HttpGet]
         public ActionResult<IList<AppUser>> GetUsers()
         {
