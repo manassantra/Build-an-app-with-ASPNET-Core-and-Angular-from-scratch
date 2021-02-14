@@ -55,3 +55,7 @@ D:\Personal Workspace\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\API
 D:\Personal Workspace\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\API\obj\Debug\net5.0\ref\API.dll
 D:\Personal Workspace\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\API\obj\Debug\net5.0\API.pdb
 D:\Personal Workspace\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\API\obj\Debug\net5.0\API.genruntimeconfig.cache
+D:\Personal Workspace\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Personal Workspace\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\Personal Workspace\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\Personal Workspace\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
