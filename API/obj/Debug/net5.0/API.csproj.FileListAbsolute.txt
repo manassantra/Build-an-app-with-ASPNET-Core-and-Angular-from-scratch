@@ -59,3 +59,6 @@ D:\Personal Workspace\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\API
 D:\Personal Workspace\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
 D:\Personal Workspace\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 D:\Personal Workspace\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Personal Workspace\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Personal Workspace\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\Personal Workspace\Build-an-app-with-ASPNET-Core-and-Angular-from-scratch\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

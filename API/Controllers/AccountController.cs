@@ -1,5 +1,4 @@
 using System;
-using Microsoft.Win32;
 using System.Threading;
 using System.Text;
 using System.Security.Cryptography;
@@ -35,7 +34,7 @@ namespace API.Controllers
             var user = new AppUser
             {
                 UserName = registerDto.Username.ToLower(),
-                PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password)),
+                PasswordHash = hmac.ComputeHash(Encoding.UTF32.GetBytes(registerDto.Password)),
                 PasswordSalt = hmac.Key
             };
 
@@ -59,7 +58,7 @@ namespace API.Controllers
             if (user == null) return Unauthorized("Invalid User");
 
             using var hmac = new HMACSHA512(user.PasswordSalt);
-            var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(loginDto.Password));
+            var computedHash = hmac.ComputeHash(Encoding.UTF32.GetBytes(loginDto.Password));
             for (int i=0; i<computedHash.Length; i++)
             {
                 if (computedHash[i] != user.PasswordHash[i])  return Unauthorized("Invalid Password");
