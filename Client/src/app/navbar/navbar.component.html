@@ -1,24 +1,49 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #144fe3;">
-    <div class="container-fluid">
+    <div class="container">
       <a class="navbar-brand text-white" routerLink=""><i class="bi bi-book-half" style="font-size: 1.5em" ></i> Fakebook</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
+        <ul class="navbar-nav" *ngIf="loggedIn">
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" routerLink="" href="#">Home <i class="bi bi-house-door"></i></a>
+            <a class="nav-link text-white" routerLink="">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#" routerLink="login">{{Link1}} <i class="bi bi-key-fill"></i></a>
+            <a class="nav-link text-white" href="#">Friends</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#" routerLink="register">{{Link2}} <i class="bi bi-file-earmark-lock2"></i></a>
+            <a class="nav-link text-white" href="#">Matches</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Welcome User
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="#">Find People</a></li>
+              <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" (click)="logout()">Logout <i class="glyphicon glyphicon-power"></i> </a></li>
+            </ul>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light text-white" type="submit">Search</button>
+
+
+        <form *ngIf="!loggedIn" #loginForm="ngForm" class="d-flex" (ngSubmit)="login()">
+          <input
+                name="username"
+                [(ngModel)]="model.username"
+                class="form-control me-2"
+                type="text"
+                placeholder="Username">
+          <input
+                name="password"
+                [(ngModel)]="model.password"
+                class="form-control me-2"
+                type="password"
+                placeholder="Password">
+
+          <button class="btn btn-outline-light text-white" type="submit">Login</button>
         </form>
       </div>
     </div>
