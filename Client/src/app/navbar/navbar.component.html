@@ -4,8 +4,8 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
-        <ul class="navbar-nav" *ngIf="loggedIn">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+        <ul class="navbar-nav" *ngIf="accountService.currentUser$ | async">
           <li class="nav-item">
             <a class="nav-link text-white" routerLink="">Home</a>
           </li>
@@ -15,21 +15,22 @@
           <li class="nav-item">
             <a class="nav-link text-white" href="#">Matches</a>
           </li>
+          &nbsp;
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Welcome User
+              Welcome , <b class="text-uppercase">User</b>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
               <li><a class="dropdown-item" href="#">Find People</a></li>
               <li><a class="dropdown-item" href="#">Edit Profile</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" (click)="logout()">Logout <i class="glyphicon glyphicon-power"></i> </a></li>
+              <li><a class="dropdown-item" href="#" (click)="logout()">Logout <i class="bi bi-power"></i></a></li>
             </ul>
           </li>
         </ul>
 
 
-        <form *ngIf="!loggedIn" #loginForm="ngForm" class="d-flex" (ngSubmit)="login()">
+        <form *ngIf="(accountService.currentUser$ | async) === null" #loginForm="ngForm" class="d-flex navbar-nav" (ngSubmit)="login()">
           <input
                 name="username"
                 [(ngModel)]="model.username"

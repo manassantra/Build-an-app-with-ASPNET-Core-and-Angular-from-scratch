@@ -8,18 +8,17 @@ import { AccountService } from '../_services/account.service';
 })
 export class NavbarComponent implements OnInit {
   model: any = {} ;
-  loggedIn: boolean ;
 
-  constructor(private accountService: AccountService) { }
+  constructor(public accountService: AccountService) { }
 
   ngOnInit(): void {
+
   }
 
   // tslint:disable-next-line:typedef
   login() {
       this.accountService.login(this.model).subscribe(response => {
         console.log(response);
-        this.loggedIn = true;
       }, error => {
         console.log(error);
       });
@@ -27,7 +26,9 @@ export class NavbarComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   logout() {
-    this.loggedIn = false;
+    this.accountService.logout();
   }
+
+
 
 }
